@@ -56,7 +56,7 @@ def get_post(id, check_author=True):
     return post
 
 
-@bp.route("/<int:id>/update", methods=("GET", "POST"))
+@bp.route('/<int:id>/update', methods=('GET', 'POST'))
 @login_required
 def update(id):
     post = get_post(id)
@@ -69,7 +69,7 @@ def update(id):
         if not title:
             error = "Title is required"
 
-        if error is None:
+        if error is not None:
             flash(error)
         else:
             db = get_db()
