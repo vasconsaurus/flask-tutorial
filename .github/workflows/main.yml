@@ -16,3 +16,10 @@ jobs:
 
       - name: echoing "oi"
         run: echo "oi"
+
+  list-my-files:
+    runs-on: self-hosted
+    steps:
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
