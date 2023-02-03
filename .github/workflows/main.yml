@@ -1,0 +1,18 @@
+name: playing around
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  echo:
+    name: echo
+    runs-on: self-hosted
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Testing API
+        run: echo "oi"
